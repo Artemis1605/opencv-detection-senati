@@ -60,6 +60,11 @@ def main():
                    (10, frame.shape[0] - 20), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
         
+        # Agregar contador de frames
+        cv2.putText(processed, f"Frame: {int(cap.get(cv2.CAP_PROP_POS_FRAMES))}", 
+                   (frame.shape[1] - 150, 30), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 1)
+        
         # Mostrar frame
         cv2.imshow('OpenCV Detection - SENATI', processed)
         
